@@ -1,0 +1,12 @@
+{# templates/product/new.html.twig #}
+{% extends "base.html.twig" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block body %}
+    {{form(form)}}
+{% endblock %}
