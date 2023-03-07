@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}{% trans %}Category index{% endtrans %}{% endblock %}
 
 {% block body %}
-    <h1>Category index</h1>
+    <h1>{% trans %}Category index{% endtrans %}</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Shortname</th>
-                <th>Longname</th>
-                <th>actions</th>
+                <th>{% trans %}Id{% endtrans %}</th>
+                <th>{% trans %}Shortname{% endtrans %}</th>
+                <th>{% trans %}Longname{% endtrans %}</th>
+                <th>{% trans %}actions{% endtrans %}</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +21,8 @@
                 <td>{{ category.shortname }}</td>
                 <td>{{ category.longname }}</td>
                 <td>
-                    <a href="{{ path('app_category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('app_category_edit', {'id': category.id}) }}">edit</a>
+                    <a href="{{ path('app_category_show', {'id': category.id}) }}">{% trans %}show{% endtrans %}</a>
+                    <a href="{{ path('app_category_edit', {'id': category.id}) }}">{% trans %}edit{% endtrans %}</a>
                 </td>
             </tr>
         {% else %}
